@@ -1,0 +1,2 @@
+import { Video } from "@/lib/types"; import VideoCard from "./VideoCard";
+export default function VideoGrid({videos}:{videos:Video[]}){ if(!videos.length) return <div className="rounded-3xl border border-dashed border-line bg-panel p-10 text-center"><p className="text-lg font-bold text-text">No videos matched that search.</p></div>; return <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">{videos.map(v=><VideoCard key={v.id} video={v} />)}</div>}
